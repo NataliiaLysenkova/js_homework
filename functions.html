@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Functions</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 	1. Создать функцию calculate(operand1, operand2, sign), где operand1 и operand2 — два числа, sign — знак арифметической операции.
+       // Функция должна расчитывать результат операции, исходя из переданного ей знака. 
+       // Функция должна проверять корректность введенных чисел и знака операции.
+       // Все аргументы для функции принять от пользователя.
+
+        // function calculate(operand1, operand2, sign) {
+        //     var result;
+        //     if (isNaN(operand1) || isNaN(operand2) )
+        //     {
+        //         alert("One of arguments is not a number!");
+        //         return;
+        //     }
+        //     switch (sign) {
+        //         case "+" : {
+        //             result = operand1 + operand2;
+        //             break;
+        //         }
+        //         case "-" : {
+        //             result = operand1 - operand2;
+        //             break;
+        //         }
+        //         case "/" : {
+        //             result = operand1 / operand2;
+        //             break;
+        //         }
+        //         case "*" : {
+        //             result = operand1 * operand2;
+        //             break;
+        //         }
+        //         default: {
+        //             alert("Unsupported operation!");
+        //             return;
+        //         }
+        //     }
+        //     return result;
+        // }
+        // var operand1 = +prompt("Enter number:");
+        // var operand2 = +prompt("Enter number:");
+        // var sign = prompt("Enter sign:");
+        // result = calculate(operand1, operand2, sign);
+        // if (result != undefined) {
+        //     alert(result);
+        // }
+
+		// 2. Создать функцию, возводящую число в степень, число и сама степень вводится пользователем.
+
+        // function power(x, n) {
+        // let result = x;
+
+        // for (let i = 1; i < n; i++) {
+        // result *= x;
+        // }
+
+        // return result;
+        // }
+
+        // let x = prompt('Enter number:');
+        // let n = prompt('Enter power:');
+
+        // if (n < 1) {
+        // alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+        // } else {
+        // alert( power(x, n) );
+        // }
+
+    // 3. Создать игру "Камень-Ножницы-Бумага".
+    // Выбор компьютера определяется строкой:
+    // var computerChoice = Math.random();
+    // alert(computerChoice);
+    // Math.random() выдает произвольное число в промежутке от 0 до 1, на основании этого можно построить принцип выбора решения компьютера.
+        // function getRandomInt(min, max) {
+        //     return Math.floor(Math.random() * (max - min)) + min;
+        // }
+        
+        // function play() {
+        //     do {
+        //         pcChoice = getRandomInt(0, 3);
+
+        //         switch (pcChoice) {
+        //             case 0: 
+        //                 alert("stone!");
+        //                 break;
+        //             case 1:
+        //                 alert("scissors!");
+        //                 break;
+        //             case 2:
+        //                 alert("paper!");
+        //                 break;
+        //             default:
+        //                 alert("Something wrong!");
+        //         }
+        //         question = confirm("Another one?");
+        //     } while (question);
+        // }
+
+        // play(); 
+
+        // 4. Напишите функцию, которая возвращает n-е число Фибоначчи. Для решения используйте цикл.
+
+        // function fibo(n) {
+        //     var f = 0, p = 1, c;
+        //     if (n <= 0) {
+        //         return NaN;
+        //     } else if (n == 1) {
+        //         return f;
+        //     } else if (n == 2) {
+        //         return p;
+        //     }
+        //     for (var i = 0; i < n - 2; i++) {
+        //         c = f + p;
+        //         f = p;
+        //         p = c;
+        //     }
+        //     return c;
+        // }
+
+        // n = +prompt("Enter n:");
+        // alert(fibo(n));
+
+
+       // 5. Зробіть так, щоб користувач вводив різний текст для кожної комірки prompt//
+
+ //    function drawTable(col, row) {
+ //    const texts = [];
+ //    for (let i = 0; i < row; i++) {
+ //    texts.push([]);
+ //    for (let j = 0; j < col; j++) {
+ //      const text = prompt(`Введіть текст для комірки (${i + 1},${j + 1}):`);
+ //      texts[i].push(text);
+ //    }
+ // };
+  
+ //    document.write('<table border="1">');
+ //    for (let i = 0; i < row; i++) {
+ //    document.write('<tr>');
+ //    for (let j = 0; j < col; j++) {
+ //      document.write(`<td>${texts[i][j]}</td>`);
+ //    }
+ //    document.write('</tr>');
+ //  }
+ //    document.write('</table>');
+ //    };
+
+    </script>
+
+</body>
+</html>

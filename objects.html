@@ -7,114 +7,104 @@
 </head>
 <body>
 
+    <!-- Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+       содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+       Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+    
+    Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+           • "director" — 9000;
+           • "manager" — 1500;
+           • "programmer" — 10000;
+           • для остальных значений — 1000.
+       После выполнения функции — вывести информацию о сотрудниках. -->
+
 	<script type="text/javascript">
 
-		 // const result = document.querySelector('.result');
-         // const name = document.querySelector('.name');
-         // const sName = document.querySelector('.sName');
-         // const age = document.querySelector('.age');
-         // const occupation = document.querySelector('.occupation');
-         // const res = document.querySelector('#res');
-         // result.addEventListener('click', getResult);
+		let employees = [];
 
-	// 	let employees = [];
+		function calculateSalary(employees) {
+  		employees.forEach(function(employee) {
+   		 switch(employee.occupation) {
+      	case "director":
+        employee.salary = 9000;
+        break;
+      case "manager":
+        employee.salary = 1500;
+        break;
+      case "programmer":
+        employee.salary = 10000;
+        break;
+      default:
+        employee.salary = 1000;
+        break;
+    }
+  		});
 
-	// 	function calculateSalary(employees) {
-  	// 	employees.forEach(function(employee) {
-   	// 	 switch(employee.occupation) {
-    //   	case "director":
-    //     employee.salary = 9000;
-    //     break;
-    //   case "manager":
-    //     employee.salary = 1500;
-    //     break;
-    //   case "programmer":
-    //     employee.salary = 10000;
-    //     break;
-    //   default:
-    //     employee.salary = 1000;
-    //     break;
-    // }
-  	// 	});
+  		console.log(employees);
+	}
 
-  	// 	console.log(employees);
-	// }
+         let sName;
+         let age;
+         let occupation;
+         function addEmployee() {
+         	let name = document.getElementById("name").value;
+         	let sName = document.getElementById("sName").value;
+         	let age = document.getElementById("age").value;
+         	let occupation = document.getElementById("occupation").value;
+         }
 
-         // let employees = [];
+         let employee = {
+         	name: name,
+         	sName: sName,
+         	age: age,
+         	occupation: occupation,
+         	show: function() {
+         		console.log(`Name: ${this.name}, Surname: ${this.sName}, Age: ${this.age}, Occupation: ${this.occupation}`);
+         	}
+         };
 
-         // let name;
-         // let sName;
-         // let age;
-         // let occupation;
-         // function addEmployee() {
-         // 	let name = document.getElementById("name").value;
-         // 	let sName = document.getElementById("sName").value;
-         // 	let age = document.getElementById("age").value;
-         // 	let occupation = document.getElementById("occupation").value;
-         // }
+         employees.push(employee);
 
-         // let employee = {
-         // 	name: name,
-         // 	sName: sName,
-         // 	age: age,
-         // 	occupation: occupation,
-         // 	show: function() {
-         // 		console.log(`Name: ${this.name}, Surname: ${this.sName}, Age: ${this.age}, Occupation: ${this.occupation}`);
-         // 	}
-         // };
+         console.log("New employee added:");
+         employee.show();
 
-         // employees.push(employee);
+         function showEmployees() {
+         	console.log("All employees:");
+         	employees.forEach(function(employee) {
+         		employee.show();
+         	});
+         }
 
-         // console.log("New employee added:");
-         // employee.show();
+		function Employee(name, sName, age, occupation) {
+			this.name = name;
+			this.sName = sName;
+			this.age = age;
+			this.occupation = occupation;
+			this.show = function() {
+				console.log(`Name: ${this.name}, Last name: ${this.sName}, Age: ${this.age}, Occupation: ${this.occupation}`);
+			};
+		}
 
-         // document.getElementById("name").value='';
-         // document.getElementById("sName").value='';
-         // document.getElementById("age").value='';
-         // document.getElementById("occupation").value='';
+		while (true) {
+			 name = prompt("Enter employee's name:");
+			if (!name) break;
+			 sName = prompt("Enter employee's last name:");
+			 age = prompt("Enter employee's age:");
+			 occupation =  prompt("Enter employee's occupation:");
+			 employee = new Employee(name, sName, age, occupation);
+			employees.push(employee);
+		}
 
-         // function showEmployees() {
-         // 	console.log("All employees:");
-         // 	employees.forEach(function(employee) {
-         // 		employee.show();
-         // 	});
-         // }
-
-         // document.getElementById("addBtn").
-         // addEventListener("click", addEmployee);
-         // document.getElementById("showBtn")
-         // .addEventListener("click", showEmployees);
-		
-	// 	const employees = [];
-
-	// 	function Employee(name, sName, age, occupation) {
-	// 		this.name = name;
-	// 		this.sName = sName;
-	// 		this.age = age;
-	// 		this.occupation = occupation;
-	// 		this.show = function() {
-	// 			console.log(`Name: ${this.name}, Last name: ${this.sName}, Age: ${this.age}, Occupation: ${this.occupation}`);
-	// 		};
-	// 	}
-
-	// 	while (true) {
-	// 		const name = prompt("Enter employee's name:");
-	// 		if (!name) break;
-	// 		const sName = prompt("Enter employee's last name:");
-	// 		const age = prompt("Enter employee's age:");
-	// 		const occupation =  prompt("Enter employee's occupation:");
-	// 		const employee = new Employee(name, sName, age, occupation);
-	// 		employees.push(employee);
-	// 	}
-
-      //   console.log("Information about employees:");
-      //   employees.forEach((employee, index) => { 
-      //   	console.log(`Employee ${index +1}:`);
-      //     employee.show();
-      // });
+        console.log("Information about employees:");
+        employees.forEach((employee, index) => { 
+        	console.log(`Employee ${index +1}:`);
+          employee.show();
+      });
 
 
-        let employees = [
+         employees = [
             employee1 = {
                 name: a = prompt("Enter first name:"), 
                 sName: b = prompt("Enter surname:"),

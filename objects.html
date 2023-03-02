@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OBJECTS</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		 // const result = document.querySelector('.result');
+         // const name = document.querySelector('.name');
+         // const sName = document.querySelector('.sName');
+         // const age = document.querySelector('.age');
+         // const occupation = document.querySelector('.occupation');
+         // const res = document.querySelector('#res');
+         // result.addEventListener('click', getResult);
+
+	// 	let employees = [];
+
+	// 	function calculateSalary(employees) {
+  	// 	employees.forEach(function(employee) {
+   	// 	 switch(employee.occupation) {
+    //   	case "director":
+    //     employee.salary = 9000;
+    //     break;
+    //   case "manager":
+    //     employee.salary = 1500;
+    //     break;
+    //   case "programmer":
+    //     employee.salary = 10000;
+    //     break;
+    //   default:
+    //     employee.salary = 1000;
+    //     break;
+    // }
+  	// 	});
+
+  	// 	console.log(employees);
+	// }
+
+         // let employees = [];
+
+         // let name;
+         // let sName;
+         // let age;
+         // let occupation;
+         // function addEmployee() {
+         // 	let name = document.getElementById("name").value;
+         // 	let sName = document.getElementById("sName").value;
+         // 	let age = document.getElementById("age").value;
+         // 	let occupation = document.getElementById("occupation").value;
+         // }
+
+         // let employee = {
+         // 	name: name,
+         // 	sName: sName,
+         // 	age: age,
+         // 	occupation: occupation,
+         // 	show: function() {
+         // 		console.log(`Name: ${this.name}, Surname: ${this.sName}, Age: ${this.age}, Occupation: ${this.occupation}`);
+         // 	}
+         // };
+
+         // employees.push(employee);
+
+         // console.log("New employee added:");
+         // employee.show();
+
+         // document.getElementById("name").value='';
+         // document.getElementById("sName").value='';
+         // document.getElementById("age").value='';
+         // document.getElementById("occupation").value='';
+
+         // function showEmployees() {
+         // 	console.log("All employees:");
+         // 	employees.forEach(function(employee) {
+         // 		employee.show();
+         // 	});
+         // }
+
+         // document.getElementById("addBtn").
+         // addEventListener("click", addEmployee);
+         // document.getElementById("showBtn")
+         // .addEventListener("click", showEmployees);
+		
+	// 	const employees = [];
+
+	// 	function Employee(name, sName, age, occupation) {
+	// 		this.name = name;
+	// 		this.sName = sName;
+	// 		this.age = age;
+	// 		this.occupation = occupation;
+	// 		this.show = function() {
+	// 			console.log(`Name: ${this.name}, Last name: ${this.sName}, Age: ${this.age}, Occupation: ${this.occupation}`);
+	// 		};
+	// 	}
+
+	// 	while (true) {
+	// 		const name = prompt("Enter employee's name:");
+	// 		if (!name) break;
+	// 		const sName = prompt("Enter employee's last name:");
+	// 		const age = prompt("Enter employee's age:");
+	// 		const occupation =  prompt("Enter employee's occupation:");
+	// 		const employee = new Employee(name, sName, age, occupation);
+	// 		employees.push(employee);
+	// 	}
+
+      //   console.log("Information about employees:");
+      //   employees.forEach((employee, index) => { 
+      //   	console.log(`Employee ${index +1}:`);
+      //     employee.show();
+      // });
+
+
+        let employees = [
+            employee1 = {
+                name: a = prompt("Enter first name:"), 
+                sName: b = prompt("Enter surname:"),
+                age: c = prompt("Enter age:"),
+                occupation: d = prompt("Enter occupation:"),
+            },
+            employee2 = {
+                name: a = prompt("Enter first name:"), 
+                sName: b = prompt("Enter surname:"),
+                age: c = prompt("Enter age:"),
+                occupation: d = prompt("Enter occupation:"),
+            },
+            employee3 = {
+                name: a = prompt("Enter first name:"), 
+                sName: b = prompt("Enter surname:"),
+                age: c = prompt("Enter age:"),
+                occupation: d = prompt("Enter occupation:"),
+            }
+        ]
+
+        function assignSalary(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                switch (arr[i].occupation) {
+                    case "director":
+                        arr[i].salary = 9000;
+                        break;
+                    case "manager":
+                        arr[i].salary = 1500;
+                        break;
+                    case "programmer":
+                        arr[i].salary = 10000;
+                        break;
+                    default:
+                        arr[i].salary = 1000;
+                }
+            }
+        }
+
+        assignSalary(employees);
+
+        for (var i = 0; i < employees.length; i++) {
+            console.log("First name: " + employees[i].name);
+            console.log("Surname: " + employees[i].sName);
+            console.log("Age: " + employees[i].age + " years old");
+            console.log("Occupation: " + employees[i].occupation);
+            console.log("Salary: " + employees[i].salary);
+        }
+
+	</script>
+</body>
+</html>

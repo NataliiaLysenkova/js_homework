@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="trello">
+		<div class="trello__header">
+			<input type="text" class="trello__inp"> <button class="trello__btn">Add task</button>
+		</div>
+		<div class="trello__body">
+			<div class="trello__sprint">
+				<div id="sprint">Sprint</div>
+				<div class="trello__task" draggable = "true" contenteditable ='true'>
+					Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Enim magnam blanditiis doloremque laudantium minima, nihil beatae cum, possimus quasi praesentium. Ea ducimus, ut commodi minus nobis similique sequi ipsam mollitia. <span class="trello__removeTaskBtn">x </span>
+				</div>
+
+				<div class="trello__task1" draggable="true" contenteditable="true">
+  					Lorem ipsum, dolor sit, amet consectetur adipisicing elit.
+  				<span class="trello__assignee">Assignee:</span>
+  			<select class="trello__assignee-select">
+    			<option value="">None</option>
+    			<option value="Name1">Name1</option>
+    			<option value="Name2">Name2</option>
+    			<option value="Name3">Name3</option>
+  			</select>
+ 				 <span class="trello__removeTaskBtn1">x</span>
+			</div>
+
+
+			</div>
+			<div class="trello__progress">
+				<div id="progress">In progress</div>
+			</div>
+			<div class="trello__review">
+				<div id="review">Review</div>
+			</div>
+			<div class="trello__done">
+				<div id="done"> Done </div>
+			</div>
+
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
